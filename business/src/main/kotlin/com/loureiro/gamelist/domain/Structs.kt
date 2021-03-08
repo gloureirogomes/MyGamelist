@@ -7,7 +7,7 @@ data class Game(
     val name: String,
     val producer: String,
     val platform: String,
-    val parentalRating: String,
+    val parentalRating: Int,
     val cooperative: Boolean,
     val rating: Int,
     val comment: String?
