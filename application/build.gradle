@@ -26,6 +26,10 @@ dependencies {
 
     // Dotenv
     implementation "io.github.cdimascio:java-dotenv:5.2.1"
+
+    //Database
+    implementation "org.mongodb:mongodb-driver-sync:4.2.2"
+
 }
 
 compileKotlin {
