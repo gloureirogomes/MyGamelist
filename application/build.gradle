@@ -1,0 +1,41 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'application'
+    id 'jacoco'
+}
+
+dependencies {
+    implementation project(':business')
+
+    // Lang
+    implementation platform("org.jetbrains.kotlin:kotlin-bom:1.4.31")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    // HTTP Server
+    implementation "io.javalin:javalin:3.8.0"
+
+    // Logging
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation "ch.qos.logback:logback-core:1.2.3"
+
+    // API Documentation
+    implementation "io.swagger.core.v3:swagger-core:2.0.9"
+    implementation "org.webjars:swagger-ui:3.24.3"
+    implementation "io.github.classgraph:classgraph:4.8.69"
+
+    // Dotenv
+    implementation "io.github.cdimascio:java-dotenv:5.2.1"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+application {
+    mainClassName = 'com.kestraa.invoices.ApplicationKt'
+}

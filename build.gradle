@@ -2,25 +2,20 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.31'
 }
 
-group = 'me.gabriel.loureiro'
-version = '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
+subprojects{
+    group = 'com.loureiro.gamelist'
+    version = '1.0.0'
 }
+
 
 dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
 }
 
-test {
-    useJUnit()
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
 }
 
-compileKotlin {
-    kotlinOptions.jvmTarget = '1.8'
-}
-
-compileTestKotlin {
-    kotlinOptions.jvmTarget = '1.8'
-}
