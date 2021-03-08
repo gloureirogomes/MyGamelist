@@ -13,8 +13,8 @@ The ***MyGamelist*** is an API Rest to register the games you are playing and to
 
 ```sh
 Platform: JVM
-Kotlin Version: 1.4.31
 Build System: Gradle
+Kotlin Version: 1.4.31
 ```
 
 ![kotlin](https://img.shields.io/badge/kotlin-007396?&logoColor=fff&style=for-the-badge&logo=kotlin)![gradle](https://img.shields.io/badge/gradle-C71A36?&logoColor=fff&style=for-the-badge&logo=gradle)
