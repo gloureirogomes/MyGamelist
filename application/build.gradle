@@ -37,5 +37,5 @@ compileTestKotlin {
 }
 
 application {
-    mainClassName = 'com.kestraa.invoices.ApplicationKt'
+    mainClassName = 'com.loureiro.gamelist.ApplicationKt'
 }
