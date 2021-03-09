@@ -46,3 +46,9 @@ Kotlin Version: 1.4.31
 ```sh
   $ gradle build
 ```
+
+### Run the application
+
+```sh
+  $ gradle run
+```
