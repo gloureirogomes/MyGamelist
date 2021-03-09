@@ -1,8 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm'
-    id 'com.github.johnrengelman.shadow' version '5.2.0'
     id 'application'
-    id 'jacoco'
 }
 
 dependencies {
@@ -23,9 +21,6 @@ dependencies {
     implementation "io.swagger.core.v3:swagger-core:2.0.9"
     implementation "org.webjars:swagger-ui:3.24.3"
     implementation "io.github.classgraph:classgraph:4.8.69"
-
-    // Dotenv
-    implementation "io.github.cdimascio:java-dotenv:5.2.1"
 
     //Database
     implementation "org.mongodb:mongodb-driver-sync:4.2.2"

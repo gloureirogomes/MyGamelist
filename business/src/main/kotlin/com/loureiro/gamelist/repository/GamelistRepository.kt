@@ -5,15 +5,15 @@ import java.util.*
 
 interface GamelistRepository {
 
-    fun findAllGames(): List<Game>?
+    fun findAll(): List<Game>?
 
-    fun findGameById(gameId: UUID): Game?
+    fun findById(gameId: UUID): Game?
 
-    fun findGameByName(gameName: String): Game?
+    fun findByName(gameName: String): Game?
 
-    fun createGame(gameToBeInserted: Game): UUID
+    fun create(gameToBeInserted: Game): UUID
 
-    fun updateGame(gameId: UUID, gameToBeUpdated: Game): UUID
+    fun update(gameId: UUID, gameToBeUpdated: Game): UUID
 
-    fun deleteGame(gameId: UUID)
+    fun delete(gameId: UUID)
 }
