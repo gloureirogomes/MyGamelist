@@ -3,7 +3,7 @@ package com.loureiro.gamelist.repository
 import com.loureiro.gamelist.domain.Game
 import java.util.*
 
-interface GamelistRepository {
+interface GameRepository {
 
     fun findAll(): List<Game>?
 

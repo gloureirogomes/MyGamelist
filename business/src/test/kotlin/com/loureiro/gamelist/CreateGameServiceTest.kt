@@ -1,6 +1,6 @@
 package com.loureiro.gamelist
 
-import com.loureiro.gamelist.repository.GamelistRepository
+import com.loureiro.gamelist.repository.GameRepository
 import com.loureiro.gamelist.services.CreateGameService
 import io.mockk.every
 import io.mockk.mockk
@@ -9,7 +9,7 @@ import org.junit.Test
 
 class CreateGameServiceTest {
 
-    private val mockGamelistRepository = mockk<GamelistRepository>()
+    private val mockGamelistRepository = mockk<GameRepository>()
     private val service = CreateGameService(mockGamelistRepository)
 
     @Test
