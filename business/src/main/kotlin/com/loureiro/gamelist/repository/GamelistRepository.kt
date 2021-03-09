@@ -3,7 +3,7 @@ package com.loureiro.gamelist.repository
 import com.loureiro.gamelist.domain.Game
 import java.util.*
 
-interface GameRepository {
+interface GamelistRepository {
 
     fun findAllGames(): List<Game>?
 
@@ -11,9 +11,9 @@ interface GameRepository {
 
     fun findGameByName(gameName: String): Game?
 
-    fun createGame(gameToInsert: Game): UUID
+    fun createGame(gameToBeInserted: Game): UUID
 
-    fun updateGame(gameId: UUID, gameToUpdate: Game): UUID
+    fun updateGame(gameId: UUID, gameToBeUpdated: Game): UUID
 
     fun deleteGame(gameId: UUID)
 }
