@@ -17,7 +17,7 @@ class CreateGameServiceTest {
         //Setup
         val mockGame = mockGame()
 
-        every { mockGamelistRepository.create(any()) } returns mockGame.id
+        every { mockGamelistRepository.create(any()) } returns mockGame.id.toString()
 
         //Execution
         service.createGame(mockGame)

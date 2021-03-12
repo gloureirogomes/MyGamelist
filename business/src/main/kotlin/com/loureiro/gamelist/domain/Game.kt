@@ -1,9 +1,7 @@
 package com.loureiro.gamelist.domain
 
-import java.util.*
-
 data class Game(
-    val id: UUID,
+    val id: String?,
     val name: String,
     val producer: String,
     val platform: String,

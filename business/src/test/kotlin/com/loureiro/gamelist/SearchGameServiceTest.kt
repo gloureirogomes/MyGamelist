@@ -34,7 +34,7 @@ class SearchGameServiceTest {
         every { mockGamelistRepository.findById(any()) } returns mockGame
 
         //Execution
-        service.findGameById(mockGame.id)
+        mockGame.id?.let { service.findGameById(it) }
 
         //Assertion
         verify(exactly = 1) { mockGamelistRepository.findById(any()) }

@@ -8,10 +8,10 @@ import java.util.*
 class DeleteGameService(private val gameRepository: GameRepository) {
     private val logger: Logger = LoggerFactory.getLogger(javaClass)
 
-    fun deleteGame(gameId: UUID) {
+    fun deleteGame(gameId: String) {
         logger.info("Deleting game: $gameId")
         gameRepository.findById(gameId)?.apply {
-            gameRepository.delete(this.id)
+            gameRepository.delete(gameId)
         }
     }
 }

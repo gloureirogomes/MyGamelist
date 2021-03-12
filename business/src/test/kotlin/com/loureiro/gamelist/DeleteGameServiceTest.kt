@@ -17,11 +17,11 @@ class DeleteGameServiceTest {
         //Setup
         val mockGame = mockGame()
 
-        every { mockGamelistRepository.findById(mockGame.id) } returns mockGame
+        every { mockGame.id?.let { mockGamelistRepository.findById(it) } } returns mockGame
         every { mockGamelistRepository.delete(any()) } returns Unit
 
         //Execution
-        service.deleteGame(mockGame.id)
+        mockGame.id?.let { service.deleteGame(it) }
 
         //Assertion
         verify(exactly = 1) { mockGamelistRepository.findById(any()) }

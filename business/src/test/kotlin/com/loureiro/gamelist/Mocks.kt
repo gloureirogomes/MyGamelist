@@ -4,7 +4,7 @@ import com.loureiro.gamelist.domain.Game
 import java.util.*
 
 internal fun mockGame() = Game(
-    id = UUID.randomUUID(),
+    id = UUID.randomUUID().toString(),
     name = "The Last of Us",
     producer = "Naughty Dog",
     platform = "Playstation",

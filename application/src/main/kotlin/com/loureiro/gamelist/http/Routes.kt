@@ -1,10 +1,10 @@
 package com.loureiro.gamelist.http
 
-import com.loureiro.gamelist.handler.liveness
-import com.loureiro.gamelist.openApi.healthDocumentation
+import com.loureiro.gamelist.handler.*
+import com.loureiro.gamelist.openApi.*
 import io.javalin.Javalin
-import io.javalin.core.util.Header
 import io.javalin.apibuilder.ApiBuilder.*
+import io.javalin.core.util.Header
 import io.javalin.plugin.openapi.dsl.documented
 
 fun mountRoutes(app: Javalin) {
@@ -16,5 +16,14 @@ fun mountRoutes(app: Javalin) {
 
     app.routes {
         get("/health", documented(healthDocumentation(), ::liveness))
+        gameRoutes()
     }
+}
+
+private fun gameRoutes() = path("/gamelist") {
+    get(":id", documented(findGameByIdDocumentation(), ::findGameById))
+    delete(":id", documented(deleteGameDocumentation(), ::deleteGame))
+    get(":name/search", documented(findGameByNameDocumentation(), ::findGameByName))
+    get(documented(findAllGamesDocumentation(), ::findAllGames))
+    post(documented(createGameDocumentation(), ::createGame))
 }

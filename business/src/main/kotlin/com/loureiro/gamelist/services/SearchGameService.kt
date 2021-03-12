@@ -14,7 +14,7 @@ class SearchGameService(private val gameRepository: GameRepository) {
         return gameRepository.findAll()
     }
 
-    fun findGameById(gameId: UUID): Game? {
+    fun findGameById(gameId: String): Game? {
         logger.info("searching game by id: $gameId")
         return gameRepository.findById(gameId)
     }

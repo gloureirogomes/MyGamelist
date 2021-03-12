@@ -7,13 +7,13 @@ interface GameRepository {
 
     fun findAll(): List<Game>?
 
-    fun findById(gameId: UUID): Game?
+    fun findById(gameId: String): Game?
 
     fun findByName(gameName: String): Game?
 
-    fun create(gameToBeInserted: Game): UUID
+    fun create(gameToBeInserted: Game): String
 
-    fun update(gameId: UUID, gameToBeUpdated: Game): UUID
+    fun update(gameId: String, gameToBeUpdated: Game)
 
-    fun delete(gameId: UUID)
+    fun delete(gameId: String)
 }
