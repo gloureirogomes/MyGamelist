@@ -13,7 +13,7 @@ interface GameRepository {
 
     fun create(gameToBeInserted: Game): String
 
-    fun update(gameId: String, gameToBeUpdated: Game)
+    fun update(gameId: String, gameToBeUpdated: Game): String
 
     fun delete(gameId: String)
 }

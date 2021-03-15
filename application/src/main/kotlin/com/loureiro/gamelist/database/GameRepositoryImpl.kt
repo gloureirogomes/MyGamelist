@@ -34,9 +34,11 @@ object GameRepositoryImpl : GameRepository {
         return document.getObjectId("_id").toHexString()
     }
 
-    override fun update(gameId: String, gameToBeUpdated: Game) {
-        TODO("Not yet implemented")
-
+    override fun update(gameId: String, gameToBeUpdated: Game): String {
+        val document = Document()
+        mapToCreateOrUpdateGame(document, gameToBeUpdated)
+        mongoCollection.updateOne(Filters.eq("_id", ObjectId(gameId)), document)
+        return document.getObjectId("_id").toHexString()
     }
 
     override fun delete(gameId: String) {
