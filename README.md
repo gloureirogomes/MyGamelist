@@ -4,7 +4,7 @@
 
 <div align="center">
 
-The ***MyGamelist*** is an API Rest to register the games you are playing and to evaluate them at the end.
+The ***MyGamelist*** is a Rest API for registering games that you have played or are still playing.
 </div>
 
 ## :rocket: Technology
