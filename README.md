@@ -52,3 +52,11 @@ Kotlin Version: 1.4.31
 ```sh
   $ gradle run
 ```
+
+### Health Check
+
+- To check if the application is ok, access:
+
+```sh
+  $ http://localhost:8080/gamelist/v1/health
+```
