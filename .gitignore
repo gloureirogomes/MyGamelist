@@ -146,6 +146,9 @@ hs_err_pid*
 ### Gradle ###
 .gradle
 build/
+gradle
+gradlew
+gradlew.bat
 
 # Idea
 .idea
