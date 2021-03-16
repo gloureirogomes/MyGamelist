@@ -11,6 +11,9 @@ dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
     testImplementation "io.mockk:mockk:1.10.6"
+
+    //Logging
+    implementation "org.slf4j:slf4j-simple:1.7.28"
 }
 
 compileKotlin {
