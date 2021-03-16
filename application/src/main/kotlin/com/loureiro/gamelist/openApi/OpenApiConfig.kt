@@ -39,7 +39,15 @@ fun createGameDocumentation() = document().operation { operation ->
     operation.description = "Create a new game"
     operation.addTagsItem(TAG)
 }.body<CreateOrUpdateGameRequest>()
-    .json("200", String::class.java)
+    .json("201", String::class.java)
+
+fun updateGameDocumentation() = document().operation { operation ->
+    operation.summary = "Update Game"
+    operation.operationId = "updateGame"
+    operation.description = "Update a game"
+    operation.addTagsItem(TAG)
+}.body<CreateOrUpdateGameRequest>()
+    .json("202", String::class.java)
 
 fun deleteGameDocumentation() = document().operation { oper ->
     oper.summary = "Delete game"

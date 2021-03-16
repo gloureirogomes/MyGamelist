@@ -21,9 +21,10 @@ fun mountRoutes(app: Javalin) {
 }
 
 private fun gameRoutes() = path("/gamelist") {
-    get(":id", documented(findGameByIdDocumentation(), ::findGameById))
-    delete(":id", documented(deleteGameDocumentation(), ::deleteGame))
-    get(":name/search", documented(findGameByNameDocumentation(), ::findGameByName))
     get(documented(findAllGamesDocumentation(), ::findAllGames))
     post(documented(createGameDocumentation(), ::createGame))
+    get(":id", documented(findGameByIdDocumentation(), ::findGameById))
+    delete(":id", documented(deleteGameDocumentation(), ::deleteGame))
+    put(":id", documented(updateGameDocumentation(), ::updateGame))
+    get(":name/search", documented(findGameByNameDocumentation(), ::findGameByName))
 }

@@ -3,6 +3,7 @@ package com.loureiro.gamelist.handler
 import com.loureiro.gamelist.config.createGameService
 import com.loureiro.gamelist.config.deleteGameService
 import com.loureiro.gamelist.config.searchGameService
+import com.loureiro.gamelist.config.updateGameService
 import com.loureiro.gamelist.http.CreateOrUpdateGameRequest
 import io.javalin.http.Context
 
@@ -13,6 +14,13 @@ fun createGame(ctx: Context) {
     val data = ctx.body<CreateOrUpdateGameRequest>().validatePayload()
     val id = createGameService.createGame(data.toGame())
     ctx.status(201).json(id)
+}
+
+fun updateGame(ctx: Context) {
+    val gameId = ctx.pathParam("id")
+    val data = ctx.body<CreateOrUpdateGameRequest>().validatePayload()
+    val id = updateGameService.updateGame(gameId, data.toGame())
+    ctx.status(202).json(id)
 }
 
 fun deleteGame(ctx: Context) {

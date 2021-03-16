@@ -10,6 +10,6 @@ internal fun mockGame() = Game(
     platform = "Playstation",
     parentalRating = 18,
     cooperative = false,
-    rating = 5,
+    rating = 5.0,
     comment = "The best game!!!"
 )

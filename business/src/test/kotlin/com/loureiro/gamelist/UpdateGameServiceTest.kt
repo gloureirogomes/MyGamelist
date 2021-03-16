@@ -18,7 +18,7 @@ class UpdateGameServiceTest {
         val mockGame = mockGame()
 
         every { mockGame.id?.let { mockGamelistRepository.findById(it) } } returns mockGame
-        every { mockGamelistRepository.update(any(), any()) } returns Unit
+        every { mockGamelistRepository.update(any(), any()) } returns mockGame.id.toString()
 
         //Execution
         service.updateGame(mockGame.id!!, mockGame)

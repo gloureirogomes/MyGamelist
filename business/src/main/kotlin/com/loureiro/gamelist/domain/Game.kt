@@ -7,6 +7,6 @@ data class Game(
     val platform: String,
     val parentalRating: Int,
     val cooperative: Boolean,
-    val rating: Int,
+    val rating: Double,
     val comment: String?
 )

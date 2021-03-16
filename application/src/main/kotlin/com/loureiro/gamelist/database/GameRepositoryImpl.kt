@@ -37,8 +37,8 @@ object GameRepositoryImpl : GameRepository {
     override fun update(gameId: String, gameToBeUpdated: Game): String {
         val document = Document()
         mapToCreateOrUpdateGame(document, gameToBeUpdated)
-        mongoCollection.updateOne(Filters.eq("_id", ObjectId(gameId)), document)
-        return document.getObjectId("_id").toHexString()
+        mongoCollection.replaceOne(Filters.eq("_id", ObjectId(gameId)), document)
+        return gameId
     }
 
     override fun delete(gameId: String) {
@@ -52,7 +52,7 @@ object GameRepositoryImpl : GameRepository {
         document.getString("platform"),
         document.getInteger("parentalRating"),
         document.getBoolean("cooperative"),
-        document.getInteger("rating"),
+        document.getDouble("rating"),
         document.getString("comment")
     )
 
