@@ -146,7 +146,6 @@ hs_err_pid*
 ### Gradle ###
 .gradle
 build/
-gradle
 
 # Idea
 .idea
