@@ -13,10 +13,6 @@ dependencies {
     // HTTP Server
     implementation "io.javalin:javalin:3.8.0"
 
-    // Logging
-    implementation "ch.qos.logback:logback-classic:1.2.3"
-    implementation "ch.qos.logback:logback-core:1.2.3"
-
     // API Documentation
     implementation "io.swagger.core.v3:swagger-core:2.0.9"
     implementation "org.webjars:swagger-ui:3.24.3"
