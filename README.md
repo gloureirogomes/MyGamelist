@@ -4,7 +4,7 @@
 
 <div align="center">
 
-The ***MyGamelist*** is a Rest API for registering games that you have played or are still playing.
+The ***MyGamelist*** is a Rest API made with Kotlin, Javalin, MongoDB and hexagonal architecture for registering games that you have played or are still playing.
 </div>
 
 ## :rocket: Technology
@@ -51,4 +51,12 @@ Kotlin Version: 1.4.31
 
 ```sh
   $ gradle run
+```
+
+### Health Check
+
+- To check if the application is ok, access:
+
+```sh
+  $ http://localhost:8080/gamelist/v1/health
 ```
