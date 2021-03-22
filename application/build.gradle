@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm'
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
 dependencies {
@@ -41,4 +42,12 @@ compileTestKotlin {
 
 application {
     mainClassName = 'com.loureiro.gamelist.ApplicationKt'
+}
+
+shadowJar {
+    mergeServiceFiles()
+    manifest {
+        attributes 'Implementation-Title': 'My Gamelist'
+        attributes 'Multi-Release': 'true'
+    }
 }
