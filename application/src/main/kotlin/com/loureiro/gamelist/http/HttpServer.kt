@@ -6,7 +6,7 @@ import io.javalin.Javalin
 fun startHttpServer(port: String = "8080") {
     val mustServeOpenAPIDocs: Boolean = System.getenv().getOrDefault("ENABLE_OPEN_API_DOCS", "false")!!
         .toBoolean()
-    val httpPort = System.getenv().getOrDefault("HTTP_PORT", port).toInt()
+    val httpPort = System.getenv().getOrDefault("PORT", port).toInt()
     val apiVersion = "v1"
     val appContext = "gamelist"
 
