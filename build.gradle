@@ -19,5 +19,7 @@ allprojects {
     }
 }
 
-task stage(dependsOn: ['clean', 'build'])
-build.mustRunAfter clean
+task stage() {
+    group "distribution"
+    dependsOn(':application:shadowJar')
+}

@@ -49,5 +49,6 @@ shadowJar {
     manifest {
         attributes 'Implementation-Title': 'My Gamelist'
         attributes 'Multi-Release': 'true'
+        attributes "Main-Class": "com.loureiro.gamelist.ApplicationKt"
     }
 }
