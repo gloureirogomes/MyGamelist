@@ -4,7 +4,7 @@ import com.loureiro.gamelist.openApi.getConfiguredOpenApiPlugin
 import io.javalin.Javalin
 
 fun startHttpServer(port: String = "8080") {
-    val mustServeOpenAPIDocs: Boolean = System.getenv().getOrDefault("ENABLE_OPEN_API_DOCS", "false")!!
+    val mustServeOpenAPIDocs: Boolean = System.getenv().getOrDefault("ENABLE_OPEN_API_DOCS", "true")!!
         .toBoolean()
     val httpPort = System.getenv().getOrDefault("PORT", port).toInt()
     val apiVersion = "v1"
